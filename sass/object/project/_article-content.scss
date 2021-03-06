@@ -1,0 +1,9 @@
+.p-article-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  @include box-shadow();
+}

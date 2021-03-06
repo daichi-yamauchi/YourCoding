@@ -1,0 +1,12 @@
+.p-footer-menu-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  list-style: none;
+  li {
+    font-size: 16px;
+  }
+  li:first-child {
+    margin-right: 30px;
+  }
+}

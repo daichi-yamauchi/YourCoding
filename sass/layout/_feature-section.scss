@@ -1,0 +1,4 @@
+.l-feature-section {
+  $padding-side: calc((100vw - #{map-get($inner-width, pc)}) / 2);
+  padding: 70px $padding-side 150px $padding-side;
+}

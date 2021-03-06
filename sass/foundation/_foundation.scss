@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+html {
+  font-size: 62.5%; // 文字サイズをrem指定にする(1rem=10px)
+}
+
+body {
+  width: 100%;
+}
+
+h1 {
+  font-size: map-get($font-sizes, large);
+}
+
+h2 {
+  font-size: map-get($font-sizes, xxlarge);
+  text-align: center;
+}
+
+h3 {
+  font-size: map-get($font-sizes, xlarge);
+  text-align: center;
+}
+
+p {
+  font-size: map-get($font-sizes, medium);
+}
+
+img {
+  display: block;
+  margin: 0;
+}
+
+label {
+  font-size: map-get($font-sizes, medium);
+}
+
+input[type='text'] {
+  font-size: map-get($font-sizes, medium);
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+textarea {
+  font-size: map-get($font-sizes, medium);
+}

@@ -1,0 +1,22 @@
+.p-price-table {
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: map-get($font-sizes, medium);
+  border-collapse: collapse;
+  background-color: #fff;
+  @include box-shadow;
+  tr {
+    height: 10rem;
+  }
+  tr:not(:last-child) {
+    border-bottom: solid 0.1rem #e5e5e5;
+  }
+  th {
+    width: 18em;
+    padding: 3rem;
+    border-right: solid 0.1rem #e5e5e5;
+  }
+  td {
+    padding: 3rem;
+  }
+}

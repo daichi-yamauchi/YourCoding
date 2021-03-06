@@ -1,0 +1,8 @@
+.p-nav-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: map-get($inner-width, pc);
+  height: 100%;
+  margin: auto;
+}

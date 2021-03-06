@@ -1,0 +1,11 @@
+.c-necessary-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  font-size: map-get($font-sizes, small);
+  color: #fff;
+  background-color: #0c449b;
+  border-radius: 10px;
+}

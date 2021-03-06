@@ -1,0 +1,4 @@
+.p-feature-inner-reverse {
+  @extend .p-feature-inner;
+  flex-direction: row-reverse;
+}

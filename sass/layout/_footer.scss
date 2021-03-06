@@ -1,0 +1,4 @@
+footer.l-footer {
+  $padding-side: calc((100vw - #{map-get($inner-width, pc)}) / 2);
+  padding: 45px $padding-side;
+}

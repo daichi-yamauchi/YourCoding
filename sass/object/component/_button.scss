@@ -1,0 +1,12 @@
+.c-button {
+  width: 155px;
+  height: 37px;
+  margin: 0;
+  font-size: map-get($font-sizes, small);
+  color: #fff;
+  background: linear-gradient(to right, #fa41cc, #6020b0);
+  border: none;
+  border-radius: 10px;
+  @include box-shadow;
+  @include d-flex-center;
+}

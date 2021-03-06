@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+.c-background-circle {
+  $circle-size: 46vw;
+  $offset: $circle-size / 2 * (1 / math.sqrt(2) - 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: map-get($z-index, background-circle);
+  width: $circle-size;
+  height: $circle-size;
+  background: url('../images/楕円形 1.png') no-repeat;
+  background-position: top $offset right $offset;
+  background-size: cover;
+}
