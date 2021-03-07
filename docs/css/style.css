@@ -257,7 +257,7 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
   width: 25px;
   height: 3px;
   border-radius: 3px;
-  background-color: rgba(153, 153, 153, 0.5);
+  background-color: rgba(179, 179, 179, 0.8);
   content: "";
 }
 
@@ -327,6 +327,10 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
   border: solid 0.1rem #e5e5e5;
   line-height: 2;
   text-align: center;
+}
+
+.c-scroll-link {
+  text-decoration: none;
 }
 
 .c-sub-headline {

@@ -6,9 +6,9 @@ const hamburger = () => {
   });
 
   // メニューアイテムを押したら、メニューを閉じる
-  $('.c-nav-menu-item').click(function () {
-    $('#hamburger-btn').toggleClass('in-open');
-    $('#nav-menu').toggleClass('hamburger-menu');
+  $('.c-scroll-link').click(function () {
+    $('#hamburger-btn').removeClass('in-open');
+    $('#nav-menu').removeClass('hamburger-menu');
   });
 };
 

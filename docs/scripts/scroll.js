@@ -1,16 +1,11 @@
-// 特定の位置までスクロール
-const scrollPage = (link, target) => {
-  const offset = 100;
-  $(link).click(() => {
-    $('html,body').animate({ scrollTop: $(target).offset().top - offset });
-  });
-};
-
 const scroll = () => {
-  $(window).load(function () {
-    scrollPage('.link-feature', '#feature');
-    scrollPage('.link-price', '#price');
-    scrollPage('.link-contact', '#contact');
+  const hOffset = window.innerWidth > 1024 ? $('.l-nav-bar').height() : 0;
+  $('a.c-scroll-link').on('click', function () {
+    const href = $(this).attr('href');
+    const target = $(href == '#' || href == '' ? 'body' : href);
+    const position = target.offset().top - hOffset;
+    $('html, body').animate({ scrollTop: position }, 500, 'swing');
+    return false;
   });
 };
 

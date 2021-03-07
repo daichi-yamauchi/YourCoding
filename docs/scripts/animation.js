@@ -1,6 +1,6 @@
 const animation = () => {
   $('section').attr({
-    'data-aos': 'fade-up',
+    'data-aos': 'fade',
   });
 
   $('.p-feature-outer:nth-child(even)').attr({

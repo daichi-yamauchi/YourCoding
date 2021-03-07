@@ -12,52 +12,52 @@ const formValidation = () => {
     }
   };
 
-  $('#name').on('blur', () => {
+  $('#name').on('blur', function () {
     if (
-      $('#name')
+      $(this)
         .val()
         .match(/[^\s\t]/)
     ) {
-      $('#name').prev().children('.c-validation').addClass('valid');
+      $(this).prev().children('.c-validation').addClass('valid');
       nameValid = true;
     } else {
-      $('#name').prev().children('.c-validation').removeClass('valid');
+      $(this).prev().children('.c-validation').removeClass('valid');
     }
     buttonEnable();
   });
 
-  $('#email').on('blur', () => {
+  $('#email').on('blur', function () {
     if (
-      $('#email')
+      $(this)
         .val()
         .match(
           /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/
         )
     ) {
-      $('#email').prev().children('.c-validation').addClass('valid');
+      $(this).prev().children('.c-validation').addClass('valid');
       emailValid = true;
     } else {
-      $('#email').prev().children('.c-validation').removeClass('valid');
+      $(this).prev().children('.c-validation').removeClass('valid');
     }
     buttonEnable();
   });
 
-  $('#comment').on('blur', () => {
+  $('#comment').on('blur', function () {
     if (
-      $('#comment')
+      $(this)
         .val()
         .match(/[^\s\t]/)
     ) {
-      $('#comment').prev().children('.c-validation').addClass('valid');
+      $(this).prev().children('.c-validation').addClass('valid');
       commentValid = true;
     } else {
-      $('#comment').prev().children('.c-validation').removeClass('valid');
+      $(this).prev().children('.c-validation').removeClass('valid');
     }
     buttonEnable();
   });
 
-  $('#privacy').on('change', () => {
-    if ($('#comment').val()) {
+  $('#privacy').on('change', function () {
+    if ($(this).val()) {
       privacyValid = true;
     } else {
       privacyValid = false;
