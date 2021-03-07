@@ -1,5 +1,8 @@
 .l-nav-bar {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: map-get($z-index, nav-bar);
+  display: block;
   width: 100vw;
   height: 94px;
   background-color: #fff;

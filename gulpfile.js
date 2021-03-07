@@ -7,7 +7,12 @@ sass.compiler = require('sass'); // dart-sassを使用
 const sassGlob = require('gulp-sass-glob');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
-const autoprefixer = require('gulp-autoprefixer');
+
+// postCssプラグインの読み込み
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssdeclsort = require('css-declaration-sorter');
+const mqpacker = require('css-mqpacker');
 
 // 画像圧縮プラグインの読み込み
 var imagemin = require('gulp-imagemin');
@@ -18,14 +23,25 @@ const changed = require('gulp-changed');
 // ディレクトリ定義
 var paths = {
   sassSrc: 'sass/style.scss', // sassのソースディレクトリ
-  sassDst: 'public/css', // sassのコンパイルファイルの保存先ディレクトリ
+  sassDst: 'docs/css', // sassのコンパイルファイルの保存先ディレクトリ
   imageSrc: 'images', // 画像のソースディレクトリ
-  imageDst: 'public/images', // 圧縮画像の保存先ディレクトリ
+  imageDst: 'docs/images', // 圧縮画像の保存先ディレクトリ
 };
 
 // Sassコンパイルタスクの定義
-const compile = () => {
-  return gulp
+const compile = (done) => {
+  const postcssPlugins = [
+    // browserlistはpackage.jsonに記載[推奨]
+    autoprefixer({
+      cascade: false,
+    }),
+    cssdeclsort({
+      order: 'smacss',
+    }),
+    mqpacker(),
+  ];
+
+  gulp
     .src(paths.sassSrc, { sourcemaps: true })
     .pipe(
       plumber({
@@ -34,22 +50,16 @@ const compile = () => {
     )
     .pipe(sassGlob()) // Sassの@importにおけるglobを有効にする
     .pipe(sass())
-    .pipe(
-      autoprefixer(['last 3 versions', 'ie >= 8', 'Android >= 4', 'iOS >= 8'])
-    )
+    .pipe(postcss(postcssPlugins))
     .pipe(gulp.dest(paths.sassDst, { sourcemaps: '.' }));
-};
-
-// ファイル変更監視タスクの定義
-const watchSass = () => {
-  return gulp.watch('sass/**', compile);
+  done();
 };
 
 // 画像の圧縮タスク
-const imageminTask = () => {
+const imageminTask = (done) => {
   var srcGlob = paths.imageSrc + '/**/*.+(jpg|jpeg|png|gif)';
   var dstGlob = paths.imageDst;
-  return gulp
+  gulp
     .src(srcGlob)
     .pipe(changed(dstGlob))
     .pipe(
@@ -65,12 +75,15 @@ const imageminTask = () => {
       ])
     )
     .pipe(gulp.dest(dstGlob));
+  done();
 };
 
 // ファイル変更監視タスクの定義
-const watchImagemin = () => {
-  return gulp.watch(paths.imageSrc + '/**/*', gulp.parallel(imageminTask));
+const watch = (done) => {
+  gulp.watch('sass/**', compile);
+  gulp.watch(paths.imageSrc + '/**/*', gulp.parallel(imageminTask));
+  done();
 };
 
 // ファイル変更監視タスクのエクスポート
-exports.watch = gulp.parallel(watchSass, watchImagemin);
+exports.default = watch;
