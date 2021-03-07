@@ -17,6 +17,10 @@ body {
   width: 100%;
 }
 
+section {
+  overflow: hidden;
+}
+
 h1 {
   margin: auto;
   font-size: map-get($font-sizes, large);

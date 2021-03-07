@@ -8,3 +8,6 @@ hamburger();
 
 import animation from './animation.js';
 animation();
+
+import scroll from './scroll.js';
+scroll();

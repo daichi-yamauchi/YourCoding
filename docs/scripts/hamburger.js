@@ -6,7 +6,7 @@ const hamburger = () => {
   });
 
   // メニューアイテムを押したら、メニューを閉じる
-  $('.menu-item').click(function () {
+  $('.c-nav-menu-item').click(function () {
     $('#hamburger-btn').toggleClass('in-open');
     $('#nav-menu').toggleClass('hamburger-menu');
   });
