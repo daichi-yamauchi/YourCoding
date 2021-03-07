@@ -17,6 +17,7 @@ body {
 }
 
 h1 {
+  margin: auto;
   font-size: 2.4rem;
 }
 
@@ -63,6 +64,7 @@ textarea {
 
 .l-catch-section {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
   padding: 160px calc((100vw - 980px) / 2);
@@ -333,6 +335,7 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
 }
 
 .c-textarea {
+  box-sizing: border-box;
   width: 100%;
   height: 180px;
   margin-bottom: 25px;
@@ -343,6 +346,7 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
 }
 
 .c-textbox {
+  box-sizing: border-box;
   width: 500px;
   max-width: 100%;
   height: 43px;
@@ -424,6 +428,7 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
 
 .p-footer-menu-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 50px;
   list-style: none;
@@ -551,6 +556,12 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
   align-self: center;
 }
 
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .l-blog-section {
     padding: 30px calc((100vw - 90%) / 2);
@@ -593,6 +604,9 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
   .p-catch-content {
     width: 100%;
     margin-bottom: 20px;
+  }
+  .p-contact-form {
+    padding: 32px 16px;
   }
   .p-feature-content {
     width: 100%;
