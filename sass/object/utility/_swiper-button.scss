@@ -1,0 +1,13 @@
+.swiper-button-prev,
+.swiper-button-next {
+  $background-ratio: 1.5;
+  $padding-Y: calc(
+    var(--swiper-navigation-size) * (#{$background-ratio} - 1) / 2
+  );
+  $padding-X: calc(
+    var(--swiper-navigation-size) * (#{$background-ratio} - 27 / 44) / 2
+  );
+  padding: $padding-Y $padding-X;
+  background: rgba($color: #fff, $alpha: 0.8);
+  border-radius: 50%;
+}

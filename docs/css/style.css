@@ -459,6 +459,13 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
   width: 100%;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  padding: calc( var(--swiper-navigation-size) * (1.5 - 1) / 2 ) calc( var(--swiper-navigation-size) * (1.5 - 27 / 44) / 2 );
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+}
+
 .background-lightgreen {
   background-color: #eefbfb;
 }
