@@ -1,3 +1,8 @@
 .l-blog-section {
   padding: 60px 70px;
+
+  @include mq() {
+    $padding-side: calc((100vw - #{map-get($inner-width, tab)}) / 2);
+    padding: 30px $padding-side;
+  }
 }

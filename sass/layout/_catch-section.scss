@@ -1,6 +1,13 @@
 .l-catch-section {
-  display: flex;
-  justify-content: space-between;
   $padding-side: calc((100vw - #{map-get($inner-width, pc)}) / 2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 160px $padding-side;
+
+  @include mq() {
+    $padding-side: calc((100vw - #{map-get($inner-width, tab)}) / 2);
+    flex-direction: column;
+    padding: 50px $padding-side;
+  }
 }

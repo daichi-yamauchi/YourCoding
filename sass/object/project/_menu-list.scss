@@ -1,4 +1,9 @@
 .p-nav-menu-list {
   display: flex;
   list-style: none;
+
+  @include mq() {
+    flex-direction: column;
+    justify-content: center;
+  }
 }

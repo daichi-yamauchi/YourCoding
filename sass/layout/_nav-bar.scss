@@ -7,4 +7,8 @@
   height: 94px;
   background-color: #fff;
   @include box-shadow;
+
+  @include mq() {
+    position: relative;
+  }
 }

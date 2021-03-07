@@ -10,7 +10,6 @@ $(function () {
 
 /***** 制作実績のスワイパーの実装 *****/
 
-// import Swiper from "https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js";
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -23,13 +22,11 @@ const swiper = new Swiper('.swiper-container', {
   autoplay: {
     delay: 5000,
   },
+  slidesPerView: 1.2,
+  spaceBetween: 10,
   breakpoints: {
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 2.5,
       spaceBetween: 40,
     },
     1024: {
@@ -37,4 +34,19 @@ const swiper = new Swiper('.swiper-container', {
       spaceBetween: 50,
     },
   },
+});
+
+/********************
+ * ハンバーガーメニュー *
+ ********************/
+// ハンバーガーボタンを押したら、メニューを表示
+$('#hamburger-btn').click(function () {
+  $(this).toggleClass('in-open');
+  $('#nav-menu').toggleClass('hamburger-menu');
+});
+
+// メニューアイテムを押したら、メニューを閉じる
+$('.menu-item').click(function () {
+  $('#hamburger-btn').toggleClass('in-open');
+  $('#nav-menu').toggleClass('hamburger-menu');
 });

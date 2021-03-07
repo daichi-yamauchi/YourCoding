@@ -1,0 +1,9 @@
+.c-tab-menu-title {
+  display: none;
+  margin: 23px;
+  text-decoration: underline;
+
+  @include mq() {
+    display: inline;
+  }
+}

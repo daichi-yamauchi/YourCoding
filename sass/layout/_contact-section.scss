@@ -2,4 +2,9 @@
   $padding-side: calc((100vw - #{map-get($inner-width, pc)}) / 2);
   padding: 70px $padding-side;
   background: linear-gradient(to right, #05a5fa, #63fbd7);
+
+  @include mq() {
+    $padding-side: calc((100vw - #{map-get($inner-width, tab)}) / 2);
+    padding: 30px $padding-side;
+  }
 }

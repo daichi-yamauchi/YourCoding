@@ -2,4 +2,9 @@
   $item-width: calc((100% - 6rem) / 3);
   display: flex;
   width: $item-width;
+
+  @include mq() {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

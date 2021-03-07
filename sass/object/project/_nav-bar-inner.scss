@@ -5,4 +5,8 @@
   width: map-get($inner-width, pc);
   height: 100%;
   margin: auto;
+
+  @include mq() {
+    width: map-get($inner-width, tab);
+  }
 }

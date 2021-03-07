@@ -1,0 +1,57 @@
+// ハンバーガーボタンの位置指定
+#hamburger-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 90;
+  display: none;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+// 棒の表示・追加
+.bun,
+.bun:before,
+.bun:after {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 3px;
+  content: '';
+  background-color: hsla(0, 0, 60%, 0.5);
+  border-radius: 3px;
+}
+
+.bun:before {
+  bottom: 8px;
+}
+.bun:after {
+  top: 8px;
+}
+
+// 開いているときにXマークにする
+.in-open .bun {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0
+  ); /*メニューオープン時は真ん中の線を透明にする*/
+  &::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  &::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+@include mq() {
+  #hamburger-btn {
+    display: flex;
+  }
+}

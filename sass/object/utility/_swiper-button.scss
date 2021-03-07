@@ -10,4 +10,8 @@
   padding: $padding-Y $padding-X;
   background: rgba($color: #fff, $alpha: 0.8);
   border-radius: 50%;
+
+  @include mq() {
+    display: none !important;
+  }
 }
