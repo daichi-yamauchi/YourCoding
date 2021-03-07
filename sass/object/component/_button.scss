@@ -10,3 +10,7 @@
   @include box-shadow;
   @include d-flex-center;
 }
+
+.c-button:disabled {
+  background: linear-gradient(to right, hsl(315, 95%, 92%), hsl(267, 69%, 71%));
+}

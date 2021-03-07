@@ -392,6 +392,7 @@
           <div class="p-form-label">
             <label for="name" class="c-form-label-text"> お名前 </label>
             <div class="c-necessary-tag">必須</div>
+            <div class="c-validation valid">入力してください</div>
           </div>
           <input type="text" name="name" id="name" class="c-textbox" required />
         </div>
@@ -401,6 +402,7 @@
               メールアドレス
             </label>
             <div class="c-necessary-tag">必須</div>
+            <div class="c-validation valid">正しい形式で入力してください</div>
           </div>
           <input
             type="email"
@@ -416,6 +418,7 @@
               お問い合わせ内容
             </label>
             <div class="c-necessary-tag">必須</div>
+            <div class="c-validation valid">入力してください</div>
           </div>
           <textarea
             name="comment"
@@ -433,6 +436,7 @@
         <input
           type="submit"
           value="送信する"
+          id="submit"
           class="c-button link-contact align-self-center"
         />
       </form>

@@ -11,3 +11,6 @@ animation();
 
 import scroll from './scroll.js';
 scroll();
+
+import formValidation from './form_validation.js';
+formValidation();

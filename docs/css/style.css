@@ -150,6 +150,10 @@ footer.l-footer {
   font-size: 1.4rem;
 }
 
+.c-button:disabled {
+  background: linear-gradient(to right, #fed7f4, #b082e8);
+}
+
 .c-catch-copy {
   font-size: 3.2rem;
 }
@@ -300,6 +304,7 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
   justify-content: center;
   width: 60px;
   height: 30px;
+  margin-right: 20px;
   border-radius: 10px;
   background-color: #0c449b;
   color: #fff;
@@ -359,6 +364,15 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
   border: none;
   border-radius: 3px;
   background-color: #eefbfb;
+}
+
+.c-validation {
+  color: #0c449b;
+  font-size: 1.6rem;
+}
+
+.c-validation.valid {
+  display: none;
 }
 
 .c-work-description {

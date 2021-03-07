@@ -1,0 +1,8 @@
+.c-validation {
+  font-size: map-get($font-sizes, medium);
+  color: #0c449b;
+}
+
+.c-validation.valid {
+  display: none;
+}
