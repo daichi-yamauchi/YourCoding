@@ -4,7 +4,6 @@ const formValidation = () => {
   let commentValid = false;
   let privacyValid = false;
   const buttonEnable = () => {
-    console.log('sss');
     if (nameValid && emailValid && commentValid && privacyValid) {
       $('#submit').prop('disabled', false);
     } else {
