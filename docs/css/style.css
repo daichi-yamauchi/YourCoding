@@ -204,6 +204,12 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
   opacity: 1;
 }
 
+.c-complete-send {
+  display: none;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
 .c-contact-catch {
   margin-bottom: 44px;
   color: #fff;
@@ -214,6 +220,12 @@ input[type=checkbox]:checked + .c-checkbox-label::after {
   color: #333333;
   font-weight: 400;
   font-size: 14px;
+  text-align: center;
+}
+
+.c-false-send {
+  display: none;
+  font-size: 1.6rem;
   text-align: center;
 }
 
