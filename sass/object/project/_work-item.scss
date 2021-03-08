@@ -1,3 +1,5 @@
 .p-work-item {
-  width: 320px;
+  display: flex;
+  flex-direction: column;
+  height: auto !important;
 }

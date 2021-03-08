@@ -1,13 +1,14 @@
 .p-footer-menu-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 50px;
+  justify-content: space-evenly;
+  max-width: 380px;
+  margin: 0 auto 50px;
   list-style: none;
   li {
     font-size: 16px;
   }
   li:first-child {
-    margin-right: 30px;
+    // margin-right: 30px;
   }
 }
